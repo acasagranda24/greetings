@@ -6,6 +6,9 @@ class Student:
         self.student_id = None
         self.classroom = None
 
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
     def welcome(self):
         return f"Welcome to Albert School, {self.first_name}!"
 
