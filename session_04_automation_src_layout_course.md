@@ -198,8 +198,8 @@ Add a small method to the class in `greetings.py` and write it sloppily: put `im
 very first line, add the method below, and put trailing spaces after the `return`:
 
 ```python
-    def initials(self) -> str:
-        return  f"{self.first_name[0]}{self.last_name[0]}"   
+def initials(self) -> str:
+    return f"{self.first_name[0]}{self.last_name[0]}"
 ```
 
 (Two spaces after `return`, three trailing spaces at the end.)
