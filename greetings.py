@@ -13,7 +13,7 @@ class Student:
         return f"Welcome to Albert School Paris, {self.first_name}! Your desk is ready."
 
     def register(self, registry: list["Student"]) -> int:
-        self.student_id = len(registry) + 1
+        self.student_id = len(registry)
         registry.append(self)
         return self.student_id
 
