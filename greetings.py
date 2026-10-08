@@ -6,6 +6,9 @@ class Student:
         self.student_id = None
         self.classroom = None
 
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
     def welcome(self):
         return f"Welcome to Albert School, {self.first_name}!"
 
@@ -16,7 +19,8 @@ class Student:
 
     def enroll(self, classroom):
         self.classroom = classroom
-        return f"{self.first_name} {self.last_name} joins {classroom}."
+        return f"{self.full_name()} joins {classroom}."
+
 
     def farewell(self):
         return f"See you soon, {self.first_name}!"
