@@ -17,6 +17,9 @@ class Student:
         registry.append(self)
         return self.student_id
 
+    def is_enrolled(self):
+        return self.classroom is not None
+    
     def enroll(self, classroom):
         self.classroom = classroom
         return f"{self.full_name()} joins {classroom}."
