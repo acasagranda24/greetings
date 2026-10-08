@@ -21,6 +21,7 @@ class Student:
         self.classroom = classroom
         return f"{self.full_name()} joins {classroom}."
 
+
     def farewell(self):
         return f"See you soon, {self.first_name}!"
 
