@@ -250,7 +250,7 @@ git diff
 @@ -14,6 +14,9 @@ class Student:
          registry.append(self)
          return self.student_id
- 
+
 +    def initials(self) -> str:
 +        return f"{self.first_name[0]}{self.last_name[0]}"
 +
