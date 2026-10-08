@@ -10,7 +10,7 @@ class Student:
         return f"{self.first_name} {self.last_name}"
 
     def welcome(self):
-        return f"Welcome to Albert School, {self.first_name}!"
+        return f"Welcome to Albert School, {self.first_name}! Your desk is ready."
 
     def register(self, registry):
         self.student_id = len(registry) + 1
