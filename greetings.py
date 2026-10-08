@@ -1,35 +1,35 @@
 class Student:
-    def __init__(self, first_name, last_name, email):
+    def __init__(self, first_name: str, last_name: str, email: str) -> None:
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
-        self.student_id = None
-        self.classroom = None
+        self.student_id: int | None = None
+        self.classroom: str | None = None
 
-    def full_name(self):
+    def full_name(self) -> str:
         return f"{self.first_name} {self.last_name}"
 
-    def welcome(self):
+    def welcome(self) -> str:
         return f"Welcome to Albert School Paris, {self.first_name}! Your desk is ready."
 
-    def register(self, registry):
+    def register(self, registry: list["Student"]) -> int:
         self.student_id = len(registry) + 1
         registry.append(self)
         return self.student_id
 
-    def is_enrolled(self):
+    def is_enrolled(self) -> bool:
         return self.classroom is not None
-    
-    def enroll(self, classroom):
+
+    def enroll(self, classroom: str) -> str:
         self.classroom = classroom
         return f"{self.full_name()} joins {classroom}."
 
-
-    def farewell(self):
+    def farewell(self) -> str:
         return f"See you soon, {self.first_name}!"
 
-if __name__ == "__main__":
-    registry = []
+
+def main() -> None:
+    registry: list[Student] = []
     student = Student("Tuka", "Bade", "tuka@albertschool.com")
     student.register(registry)
     print(student.welcome())
@@ -37,3 +37,7 @@ if __name__ == "__main__":
     print(f"Confirmation sent to {student.email}")
     print(student.enroll("MSc 1 Data"))
     print(student.farewell())
+
+
+if __name__ == "__main__":
+    main()
